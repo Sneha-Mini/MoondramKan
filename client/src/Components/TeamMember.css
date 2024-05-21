@@ -1,0 +1,21 @@
+.team-member-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .team-member-image {
+    width: 150px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-radius: 5px;
+  }
+  
+  .team-member-name {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .team-member-designation {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  

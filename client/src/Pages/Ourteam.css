@@ -1,0 +1,21 @@
+.our-team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+  
+  .ourteam{
+    max-width: 1300px;
+    margin-left: 100px;
+  }
+  @media (max-width: 768px) {
+    .our-team-container {
+      flex-direction: column;
+    }
+    .ourteam{
+        max-width: 100%;
+        margin-left: 0px;
+      }
+  }
+  
