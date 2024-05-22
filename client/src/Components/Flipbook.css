@@ -20,4 +20,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #242424;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
+@media (max-width: 768px) {
+    .flipbook-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #242424;
+        width: 600px;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    
+}
+

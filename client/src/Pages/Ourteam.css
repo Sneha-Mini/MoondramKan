@@ -3,8 +3,7 @@
     justify-content: center;
     flex-wrap: wrap;
     
-  }
-  
+  } 
   .ourteam{
     max-width: 1300px;
     margin-left: 100px;
@@ -12,8 +11,8 @@
   @media (max-width: 768px) {
     .our-team-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns */
-      gap: 20px; /* Adjust the gap between team members */
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 0px; 
     }
     .ourteam{
         max-width: 100%;

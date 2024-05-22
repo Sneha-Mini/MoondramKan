@@ -65,7 +65,7 @@ function Flipbook({ pdf, width, height, responsiveWidth, responsiveHeight, small
     };
 
     return (
-        <div className='h-screen w-screen flex flex-col gap-5 justify-center items-center bg-gray-900 overflow-hidden relative'>
+        <div >
             {currentPage > 0 && (
                 <button className="btn prev-btn" onClick={goToPreviousPage}>Previous</button>
             )}
@@ -173,10 +173,10 @@ Flipbook.propTypes = {
 Flipbook.defaultProps = {
     width: 600,
     height: 870,
-    responsiveWidth: 320,
-    responsiveHeight: 435,
-    smallWidth: 210,
-    smallHeight: 290,
+    responsiveWidth: 400,
+    responsiveHeight: 535,
+    smallWidth: 300,
+    smallHeight: 390,
 };
 
 export default Flipbook;

@@ -39,14 +39,12 @@ function Ourteam() {
         
     </div>
     <Footer></Footer>
-    <div className='.a'style={{ textAlign: 'right', marginRight: '10px' }}>
-          <a href='https://dremerz.com/' style={{ fontSize: '14px', textDecoration: 'none', color: 'black' }}>
-              Designed and Developed by DREMERZ CONSULTANCY & SERVICES
-          </a>
+    <div className="footer-copyright">
+        <p>© 2024 All Rights Reserved, Moondram Kan</p><p style={{ marginBottom: '2px',}}>Designed and Developed by<br/>
+        </p><a href="https://dremerz.com/" style={{ textDecoration: 'none',}}>
+          DREMERZ CONSULTANCY & SERVICES
+        </a>
     </div>
-    <div class="footer-copyright">
-          <p>© 2024 All Rights Reserved, Moondram Kan</p>
-      </div>
     </div>
     );
 }

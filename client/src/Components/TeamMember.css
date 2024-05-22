@@ -1,8 +1,12 @@
 .team-member-container {
-    text-align: center;
-    margin: 20px;
-  }
-  
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
   .team-member-image {
     width: 150px; /* Adjust as needed */
     height: 200px; /* Adjust as needed */
@@ -21,6 +25,7 @@
   @media (max-width: 768px) {
     .team-member-container {
       margin: 10px;
+      padding: 10px;
     }
   
     .team-member-image {

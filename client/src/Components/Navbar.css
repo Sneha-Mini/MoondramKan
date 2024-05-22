@@ -54,15 +54,16 @@
 }
 
 .nav-links {
+  display: flex;
   background-color: #842B3C;
-  padding: 15px 0;
+  padding: 15px 200px;
   text-align: center;
+  gap: 180px;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
-  margin: 0 95px;
   font-size: 18px;
   position: relative;
 }
@@ -127,13 +128,15 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
-    margin-bottom: 2px;
-    
-    padding: 0px 20px;
+    padding: 10px 0;
+    width: 100wh;
     position: relative;
-    background-color: #842B3C;
+   
   }
-  
+  .nav-link:not(:last-child)::after  {
+    background-color: white;
+  }
+   
   .navbar-column:not(:last-child) {
     margin-right: 0px;
   }
@@ -165,8 +168,8 @@
   .nav-links {
     display: none;
     margin-top: 25px;
-    background-color: #ffffff;
-    padding: 15px 0;
+    background-color: #842B3C;
+    padding: 0;
     text-align: center;
   }
 
