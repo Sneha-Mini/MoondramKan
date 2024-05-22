@@ -1,23 +1,43 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
-import './Magazine.css'
+import React, { useState, useEffect } from 'react';
+import Navbar from '../Components/Navbar';
+import './Magazine.css';
 import Flipbook from '../Components/Flipbook';
 import Footer from '../Components/Footer';
-import pdf from '../assets/Magazine.pdf';
+import pdfLarge from '../assets/Magazine_large.pdf';
+import pdfSmall from '../assets/Magazine_small.pdf';
 
 function Magazine() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const pdf = windowWidth <= 768 ? pdfSmall : pdfLarge;
+
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <h2 className="heading">Magazine</h2>
-      <div className='container'><Flipbook pdf={pdf}></Flipbook></div>
-      <Footer></Footer>
-      <div class="footer-copyright">
-          <p>© 2024 All Rights Reserved, Moondram Kan</p>
+      <div className="container">
+        <Flipbook pdf={pdf} />
       </div>
-
+      <Footer />
+      <div className=".a" style={{ textAlign: 'right', marginRight: '10px' }}>
+        <a href="https://dremerz.com/" style={{ fontSize: '14px', textDecoration: 'none', color: 'black' }}>
+          Designed and Developed by DREMERZ CONSULTANCY & SERVICES
+        </a>
+      </div>
+      <div className="footer-copyright">
+        <p>© 2024 All Rights Reserved, Moondram Kan</p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Magazine
+export default Magazine;

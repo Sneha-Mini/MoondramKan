@@ -11,7 +11,9 @@
   }
   @media (max-width: 768px) {
     .our-team-container {
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 20px; /* Adjust the gap between team members */
     }
     .ourteam{
         max-width: 100%;

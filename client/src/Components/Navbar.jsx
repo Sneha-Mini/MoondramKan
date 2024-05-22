@@ -5,7 +5,7 @@ import icon1 from '../assets/icon1.png';
 import icon2 from '../assets/icon2.png'; 
 import icon3 from '../assets/icon3.png'; 
 import logo from '../assets/logo.jpg'; 
-import pdf from '../assets/sample.pdf';
+import pdf from '../assets/Newspaper_large.pdf';
 
 const Navbar = () => {
   const [showNavLinks, setShowNavLinks] = useState(false);
@@ -42,13 +42,13 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-column">
-          <img src={logo} alt="Logo" className="navbar-logo" />
+        <Link to="/Home"><img src={logo} alt="Logo" className="navbar-logo" /></Link>
         </div>
         <div className="navbar-column third-column">
           <button className="epaper-button" onClick={handleDownload}>E Paper</button>
           <p className="date-text">{formattedDate}</p>
         </div>
-      </nav>
+      </nav >
       <div className="toggle-menu" onClick={toggleNavLinks}>
           <div className={`bar1 ${showNavLinks ? 'change' : ''}`}></div>
           <div className={`bar2 ${showNavLinks ? 'change' : ''}`}></div>

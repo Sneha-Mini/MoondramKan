@@ -18,4 +18,25 @@
     margin-top: 5px;
     font-style: italic;
   }
+  @media (max-width: 768px) {
+    .team-member-container {
+      margin: 10px;
+    }
+  
+    .team-member-image {
+      width: 120px; /* Adjusted width */
+      height: 160px; /* Adjusted height */
+    }
+  
+    .team-member-name {
+      font-size: 16px; /* Adjusted font size */
+      margin-top: 5px;
+    }
+  
+    .team-member-designation {
+      font-size: 14px; /* Adjusted font size */
+      margin-top: 3px;
+    }
+  }
+  
   

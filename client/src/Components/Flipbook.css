@@ -21,28 +21,3 @@
     justify-content: center;
     align-items: center;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .flipbook-container {
-        width: 300px; /* Adjust as needed */
-        height: auto;
-    }
-
-    .pdf-page canvas {
-        width: 100%; /* Ensure canvas fits within the container */
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .flipbook-container {
-        width: 200px; /* Adjust as needed */
-        height: auto;
-    }
-
-    .pdf-page canvas {
-        width: 100%; /* Ensure canvas fits within the container */
-        height: auto;
-    }
-}
