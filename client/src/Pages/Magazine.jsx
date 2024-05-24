@@ -3,11 +3,11 @@ import Navbar from '../Components/Navbar';
 import './Magazine.css';
 import Flipbook from '../Components/Flipbook';
 import Footer from '../Components/Footer';
-import pdfLarge from '../assets/Magazine_large.pdf';
-import pdfSmall from '../assets/Magazine_small.pdf';
+import axios from 'axios'; // Import Axios
 
 function Magazine() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [pdf, setPdf] = useState('');
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,7 +18,24 @@ function Magazine() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const pdf = windowWidth <= 768 ? pdfSmall : pdfLarge;
+  useEffect(() => {
+    axios.get("https://dremerz-erp.com/api/MoondramkanMagazineMobilePDF/")
+      .then((res) => {
+        const mobilePdfUrl = res.data[0].pdf;
+        axios.get("https://dremerz-erp.com/api/MoondramkanMagazineDeskTopPDF/")
+          .then((res) => {
+            const desktopPdfUrl = res.data[0].pdf;
+            const selectedPdf = windowWidth <= 768 ? mobilePdfUrl : desktopPdfUrl;
+            setPdf(selectedPdf);
+          })
+          .catch((error) => {
+            console.error('Error fetching desktop PDF:', error);
+          });
+      })
+      .catch((error) => {
+        console.error('Error fetching mobile PDF:', error);
+      });
+  }, [windowWidth]); 
 
   return (
     <div>
@@ -29,8 +46,9 @@ function Magazine() {
       </div>
       <Footer />
       <div className="footer-copyright">
-        <p>© 2024 All Rights Reserved, Moondram Kan</p><p style={{ marginBottom: '2px',}}>Designed and Developed by<br/>
-        </p><a href="https://dremerz.com/" style={{ textDecoration: 'none',}}>
+        <p>© 2024 All Rights Reserved, Moondram Kan</p>
+        <p style={{ marginBottom: '2px',}}>Designed and Developed by<br/></p>
+        <a href="https://dremerz.com/" style={{ textDecoration: 'none',}}>
           DREMERZ CONSULTANCY & SERVICES
         </a>
       </div>

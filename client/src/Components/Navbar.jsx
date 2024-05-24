@@ -57,6 +57,7 @@ const Navbar = () => {
       <nav className={`nav-links ${showNavLinks ? 'show' : ''}`}>
       <Link to="/Home" className="nav-link">Home</Link>
       <Link to="/Home" className="nav-link">Newspaper</Link>
+      <Link to="/Flashnews" className="nav-link">Flash News</Link>
         <Link to="/Magazine" className="nav-link">Magazine</Link>
         <Link to="/About" className="nav-link">About Us</Link>
         <Link to="/Ourteam" className="nav-link">Our Team</Link>

@@ -56,9 +56,9 @@
 .nav-links {
   display: flex;
   background-color: #842B3C;
-  padding: 15px 200px;
+  padding: 15px 160px;
   text-align: center;
-  gap: 180px;
+  gap: 140px;
 }
 
 .nav-link {

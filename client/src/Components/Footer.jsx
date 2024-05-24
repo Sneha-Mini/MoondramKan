@@ -24,6 +24,7 @@ function Footer() {
                 <h2 className="footer-heading">Services</h2>
                 <ul className="footer-list">
                 <li className="footer-item"><Link to="/Home"><a href="#daily-newspaper">Daily Newspaper</a></Link></li>
+                <li className="footer-item"><Link to="/Flashnews"><a href="Flashnews">Flash News</a></Link></li>
                 <li className="footer-item"><Link to="/Magazine"><a href="#magazine">Magazine</a></Link></li>
                 </ul>
             </div>

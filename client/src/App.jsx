@@ -5,7 +5,7 @@ import About from './Pages/About'
 import Home from './Pages/Home'
 import Magazine from './Pages/Magazine'
 import Ourteam from './Pages/Ourteam'
-
+import Flashnews from './Pages/Flashnews'
 function App() {
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/Home" element={<Home/>} />
           <Route path="/About" element={<About />} />
+          <Route path="/Flashnews" element={<Flashnews />} />
           <Route path="/Magazine"element={<Magazine />} />
           <Route path="/Ourteam"element={<Ourteam />} />
           
